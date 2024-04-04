@@ -1,0 +1,87 @@
+body {
+    padding-bottom: 300px;
+}
+
+main {
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+}
+
+main h1 {
+    padding: 30px;
+}
+#video, #report {
+    margin-bottom: 80px;
+}
+#ultrasound-data {
+    padding-left: 30px;
+}
+#ultrasound-data h2 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#ultrasound-data h3 {
+    padding-bottom: 10px;
+}
+
+#video-field, #report-field {
+    background-color: #aaa;
+    width: 100%;
+    height: 500px;
+}
+
+.download {
+    background-color: #0073d7;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    display: block;
+    width: 96%;
+    text-align: center;
+}
+
+#ultrasound-images div {
+    align-items: center;
+    width: 43%;
+    padding: 30px;
+}
+
+#ultrasound-images div img{
+    width: 100%;
+}
+
+#ultrasound-images div a{
+    width: 90%;
+}
+
+.download:hover {
+    cursor: pointer;
+}
+
+#ultrasound-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ultrasound-images img {
+    width: 30%;
+    margin: 5px;
+}
+
+#gif-preview {
+    width: 100%;
+}
+
+#report-frame {
+    width: 100%;
+    height: 500px;
+}

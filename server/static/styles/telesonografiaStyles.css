@@ -1,0 +1,206 @@
+body {
+    background-color: #CCECFF;
+}
+section {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+    width: 750px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    margin-top: 50px
+}
+
+.center {
+    text-align: center; /* Alinea el contenido horizontalmente */
+    margin-top: 4%;
+}
+
+.center h2 {
+    font-family: Arial;
+    font-size: 22pt;
+    margin-bottom: 30px; /* Espaciado entre el título y el formulario */
+    color: #757575;
+    font-weight: bold;
+}
+
+.center form {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+
+}
+
+.center form label {
+    text-align: left; /* Alinea los labels a la izquierda */
+    margin-bottom: 20px; /* Espaciado entre los labels */
+    display: block; /* Para asegurarse de que cada label esté en su propia línea */
+    margin-top: 40px;
+    margin-left: 20px;
+    font-family: arial;
+    color: #757575;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.center ul {
+    list-style: none; /* Quita los estilos de lista predeterminados */
+    margin-bottom: 30px; /* Elimina el margen */
+    margin-top: 20px;
+    padding: 0; /* Elimina el relleno */
+}
+.center ul li {
+    margin-bottom: 10px; /* Añade un espacio entre elementos de lista */
+}
+
+.center ul li a {
+    color:#757575; /* Color del texto gris */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    font-family: arial;
+    margin-left: 15px; /* Margen del 5% */
+    display: block; /* Cambiado a bloque para ocupar todo el ancho disponible */
+    width: auto; /* Ancho automático */
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-family: arial;
+    font-weight: bold;
+    
+}
+
+.center ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.center form input[type="text"],
+.center form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    font-family: arial;
+    border: 4px solid #C7F1F6;
+    padding: 25px;
+    color: #757575;
+    background-color: white;
+    width: 400px;
+    font-size: 14pt;
+}
+
+.center form input[type="submit"] {
+    height: 65px;
+    width: 454px;
+    background-color: #B2EBF2;
+    color: #757575;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center form input[type="submit"]:hover {
+    background-color: #87CEFA;
+    color: white;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    section {
+        width: 350px;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas, como teléfonos */
+@media only screen and (max-width: 480px) {
+    section {
+        width: 350px;
+    }
+
+    .center h2 {
+        font-family: Arial;
+        font-size: 16pt;
+        margin-bottom: 30px; /* Espaciado entre el título y el formulario */
+        margin-top: 45px;
+        color: #757575;
+        font-weight: bold;
+    }
+    .center form {
+        display: flex;
+    
+    }
+    
+    .center form label {
+        text-align: left; /* Alinea los labels a la izquierda */
+        margin-bottom: 20px; /* Espaciado entre los labels */
+        display: block; /* Para asegurarse de que cada label esté en su propia línea */
+        margin-top: 40px;
+        margin-left: 20px;
+        font-family: arial;
+        color: #757575;
+        font-weight: bold;
+        font-size: 14pt;
+    }
+    
+    .center ul {
+        list-style: none; /* Quita los estilos de lista predeterminados */
+        margin-bottom: 30px; /* Elimina el margen */
+        margin-top: 20px;
+        padding: 0; /* Elimina el relleno */
+    }
+    .center ul li {
+        margin-bottom: 10px; /* Añade un espacio entre elementos de lista */
+    }
+    
+    .center ul li a {
+        color:#757575; /* Color del texto gris */
+        text-decoration: none; /* Quita el subrayado predeterminado */
+        font-family: arial;
+        margin-left: 15px; /* Margen del 5% */
+        display: block; /* Cambiado a bloque para ocupar todo el ancho disponible */
+        width: auto; /* Ancho automático */
+        text-align: left; /* Alinear el texto a la izquierda */
+        font-family: arial;
+        font-weight: bold;
+        
+    }
+    
+    .center ul li a:hover {
+        text-decoration: underline; /* Subrayado al pasar el mouse */
+    }
+    
+    .center form input[type="text"],
+    .center form input[type="password"] {
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 25px;
+        font-family: arial;
+        border: 4px solid #C7F1F6;
+        padding: 25px;
+        color: #757575;
+        background-color: white;
+        width: 250px;
+        font-size: 14pt;
+    }
+    
+    .center form input[type="submit"] {
+        height: 65px;
+        width: 300px;
+        background-color: #B2EBF2;
+        color: #757575;
+        border: none;
+        padding: 15px 30px;
+        text-align: center;
+        cursor: pointer;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

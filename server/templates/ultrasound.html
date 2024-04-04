@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasound</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/standar_normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/ultrasound.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+            </a>
+        </div>
+    </header>
+    
+    <!---
+        Codigo de escalabilidad
+        Procesos para compartir mediante salud digna
+
+            <section id="segurity">
+                <div>
+                    <h1>Protocolo de seguridad</h1>
+                    <p>Ingresa la contraseña para acceder a este ultrasonido</p>
+                    <input type="text">
+                </div>
+            </section>
+    -->
+
+    <main>
+        <h1>Resultados de ultrasonido</h1>        
+        <div id="ultrasound-data">
+            <h2 id="examination_type"></h2>
+            <h3>Folio: <span id="reference_id"></span></h3>
+            <h3>Dia de examinación: <span id="examination_date"></span></h3>
+            <h3>Email del doctor: <span id="doctor_email"></span></h3>
+        </div>
+
+        <div>
+            <h1>Imágenes del ultrasonido</h1>
+            <div id="ultrasound-images">
+                <div >
+                    <img src="/api/v1/get-jpg/IMG_20240402_1_1.dcm/low-quality" alt="">
+                    <a href="/api/v1/get-jpg/IMG_20240402_1_1.dcm/low-quality" download="IMG_20240402_1_1" class="download">
+                        Descargar imagen
+                    </a>
+                </div>
+
+                <div >
+                    <img src="/api/v1/get-jpg/IMG_20240402_1_2.dcm/low-quality" alt="">
+                    <a href="/api/v1/get-jpg/IMG_20240402_1_2.dcm/low-quality" download="IMG_20240402_1_1" class="download">
+                        Descargar imagen
+                    </a>
+                </div>
+
+                <div >
+                    <img src="/api/v1/get-jpg/IMG_20240402_1_3.dcm/low-quality" alt="">
+                    <a href="/api/v1/get-jpg/IMG_20240402_1_3.dcm/low-quality" download="IMG_20240402_1_1" class="download">
+                        Descargar imagen
+                    </a>
+                </div>
+
+                <div >
+                    <img src="/api/v1/get-jpg/IMG_20240402_1_4.dcm/low-quality" alt="">
+                    <a href="/api/v1/get-jpg/IMG_20240402_1_4.dcm/low-quality" download="IMG_20240402_1_1" class="download">
+                        Descargar imagen
+                    </a>
+                </div>
+
+                <div >
+                    <img src="/api/v1/get-jpg/IMG_20240402_1_5.dcm/low-quality" alt="">
+                    <a href="/api/v1/get-jpg/IMG_20240402_1_5.dcm/low-quality" download="IMG_20240402_1_1" class="download">
+                        Descargar imagen
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="video">
+            <h1>GIF del ultrasonido</h1>
+            <img id="gif-preview" src="/api/v1/get-gif/1" alt="GIF Animado">
+            <a id="download-gif" href="/api/v1/get-gif/1" download="grabación.gif" class="download">
+                Descargar galería de imágenes por GIF
+            </a>
+        </div>
+
+        <div id="report">
+            <h1>Reporte del ultrasonido</h1>
+            <iframe id="report-frame" src="{{ url_for('static', filename='storage/Results - 1.pdf') }}" frameborder="0"></iframe>
+            <a id="download-gif" href="{{ url_for('static', filename='storage/Results - 1.pdf') }}" download="reporte.pdf" class="download">
+                Descargar informe del ultrasonido PDF
+            </a>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/ultrasound.js') }}"></script>
+</body>
+</html>
+
+<!--
+     <video id="video-field" src="{{ url_for('static', filename='storage/MP4_20240402_1_1.mp4') }}" width="100%" height="100%" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+    <div id="report">
+        <h1>Reporte del ultrasonido</h1>
+        <iframe id="report-field" src="/server/storage/1.pdf"></iframe>
+        <button id="download-report" class="download">Descargar reporte PDF</button>
+    </div>
+-->

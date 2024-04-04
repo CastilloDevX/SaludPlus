@@ -1,0 +1,264 @@
+main {
+    min-height: 89vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+#profile, #view {
+    height: 80vh;
+    margin: 20px 10px;
+    border-radius: 20px;
+}
+
+#profile {
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 500px;
+}
+
+#general-data {
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#general-data {
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+hr {
+    margin: 0px 30px;
+}
+
+#general-data h1 {
+    margin: 25px;
+    font-size: 25px;
+}
+
+#personal-data {
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+#log-out {
+    margin-left: 30px;
+    width: calc(100% - 60px);
+    background-color: #0073d7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#log-out:hover {
+    cursor: pointer;
+}
+#personal-data h1 {
+    font-size: 25px;
+}
+
+#personal-data p {
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+#personal-data p span {
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+#view {
+    width: 600px;
+    min-height: 200px;
+}
+
+#nav-options {
+    width: 100%;
+    height: 50px;
+}
+
+#nav-options button {
+    padding: 10px 25px;
+    border: 0px;
+    font-weight: bold;
+    height: 100%;
+    margin-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+#nav-options button:hover {
+    cursor: pointer;
+}
+.option_selected {
+    background-color: white;
+    color: #0073d7;
+    box-shadow: 
+        0 -1px 0 0 #0073d7,
+        1px 0 0 0 #0073d7,
+        -1px 0 0 0 #0073d7,
+        0 1px 0 0 white;
+}
+
+.option_no_selected {
+    background-color: #0073d7;
+    color: white;
+    box-shadow: 0 0 0 1px #0073d7;
+}
+
+#view-option {
+    background-color: white;
+    width: 100%;
+    margin-top: 1px;
+    min-height: calc(100% - 80px);
+    box-shadow: 0 0 0 1px #0073d7;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 15px 20px 15px 20px;
+}
+
+.view-option-selected {
+    display: block;
+}
+
+.no-view-option-selected {
+    display: none;
+}
+
+.ultrasound-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#ultrasounds h1 {
+    margin-bottom: 20px;
+}
+
+#ultrasounds-btns div {
+    background-color: #e8e8e8;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+.ultrasound-info {
+    width: 70%;
+}
+.ultrasound-info h2{
+   padding: 5px 0px 0px 0px;
+}
+
+.ultrasound-btn-options, .ultrasound-unavailable {
+    width: 20%;
+}
+
+.ultrasound-btn-options button, .ultrasound-unavailable button {
+    border: none;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 0px;
+}
+
+.ultrasound-unavailable button {
+    background-color: #61616100;
+}
+
+.ultrasound-btn-options button {
+    background-color: #0073d7; 
+}
+
+.ultrasound-btn-options button:hover {
+    cursor: pointer;
+}
+
+.ultrasound-details-btn img  {
+    width: 20%;
+}
+
+.ultrasound-details-btn img { 
+    filter: invert(1);
+}
+
+.ultrasound-details-btn p {
+    margin: 0px;
+    width: 100%;
+}
+
+.ultrasound-unavailable img {
+    filter: invert(0.5);
+}
+
+.ultrasound-unavailable p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#schedule-ultrasound h1 {
+    margin-bottom: 20px;
+}
+
+#schedule-ultrasound h2 {
+    font-size: 20px;
+}
+
+#schedule-ultrasound select, #schedule-ultrasound input {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: transparent;
+    color: #616161;
+    border-color: #616161;
+    border-radius: 10px;
+}
+
+#schedule-ultrasound input:hover {
+    border-color: #616161;
+}
+
+#schedule-date {
+    display: flex;
+}
+
+#date {
+    margin-right: 10px;
+}
+
+#time {
+    margin-left: 10px;
+}
+
+#submit {
+    background-color: #0073d7;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+#notification {
+    color: red;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 12000px) {
+    #general-data {
+        width: 100%;
+    }
+
+}

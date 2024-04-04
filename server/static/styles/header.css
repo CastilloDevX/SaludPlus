@@ -1,0 +1,58 @@
+header {
+    height: 10vh; /* 8% del alto de la pantalla */
+    background-color:white;
+    text-align: center;
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(189, 189, 189);
+}
+
+.logo img {
+    margin-left: 8vh;
+    height: 100%;
+    max-height: 7vh; /* Establece la altura máxima de la imagen */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 20pt;
+    margin-right: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #757575;
+    text-decoration: none;
+}
+/* Estilos para pantallas más pequeñas */
+@media only screen and (max-width: 1200px) {
+    .logo img {
+        width: auto;
+        margin-left: 25px;
+    }
+    nav ul {
+        list-style: none;
+        font-size: 20px;
+        margin-right: 25px;
+}
+}
+
+/* Estilos para pantallas aún más pequeñas, como teléfonos */
+@media only screen and (max-width: 480px) {
+    .logo img {
+        margin-left: 25px;
+    }
+    nav ul {
+        list-style: none;
+        font-size: 20px;
+        margin-right: 25px;
+    }
+}

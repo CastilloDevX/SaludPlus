@@ -1,0 +1,205 @@
+body {
+    margin: 0; /* Elimina el margen predeterminado del body */
+    background-color: #CCECFF;
+}
+
+section {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la sección */
+    margin: auto;
+    background-color: white;
+    width: 750px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    margin-top: 50px;
+}
+
+.center {
+    max-width: 450px; /* Ancho máximo del recuadro */
+    width: 100%; /* Para que ocupe todo el ancho de la sección */
+    height: 446px;
+
+}
+h2 {
+    color: #757575;
+    font-family: Arial, sans-serif;
+    font-size: 24pt;
+    margin-top: 65px;
+    margin-bottom: 70px;
+    text-align: center; /* Alinea el contenido al centro dentro del recuadro */
+}
+label {
+    color: #757575;
+    font-family: arial;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
+form input {
+    padding: 20px;
+    margin-top: 20px; /* Aumenta el espacio entre los inputs */
+    width: 402px;
+    height: 20px;
+    border-radius: 25px;
+    border: 4px solid #C7F1F6;
+    font-family: arial;
+    color: #757575;
+    font-size: 14pt;
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding: 10px 30px; /* Ajusta el padding para el botón */
+    background-color: #B2EBF2; /* Cambia el color de fondo del botón */
+    color: #757575; /* Cambia el color del texto del botón a blanco */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 25px; /* Aplica esquinas redondeadas al botón */
+    font-family: Arial; /* Define la fuente del texto del botón */
+    font-size: 16px; /* Define el tamaño de la fuente del botón */
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    width: 450px; /* Ajusta el ancho del botón */
+    height: 60px; /* Ajusta la altura del botón automáticamente */
+    display: block; /* Hace que el botón sea un elemento de bloque */
+    margin: 11px auto; /* Centra el botón horizontalmente y agrega un margen inferior */
+    text-align: center;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #87CEFA; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    color: white;
+}
+
+.center ul {
+    list-style: none; /* Quita los estilos de lista predeterminados */
+    margin-bottom: 30px; /* Elimina el margen */
+    margin-top: 35px;
+    padding: 0; /* Elimina el relleno */
+}
+.center ul li {
+    margin-bottom: 10px; /* Añade un espacio entre elementos de lista */
+
+}
+
+.center ul li a {
+    color:#757575; /* Color del texto gris */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    font-family: arial;
+    margin-left: 15px; /* Margen del 5% */
+    display: block; /* Cambiado a bloque para ocupar todo el ancho disponible */
+    width: auto; /* Ancho automático */
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-family: arial;
+    font-weight: bold;
+}
+
+.center ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+#countdown {
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 25px; /* Ajusta el margen superior */
+    font-family: Arial, sans-serif;
+    color: #757575; /* Color del texto gris */
+    margin-bottom: 30px;
+}
+
+#timer {
+    color: gray; /* Color del temporizador */
+    font-size: 20px; /* Tamaño de la fuente */
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Estilos para pantallas aún más pequeñas, como teléfonos */
+@media only screen and (max-width: 480px) {
+    section {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente la sección */
+        align-items: center;
+        background-color: white;
+        width: 350px;
+        height: auto;
+        border-radius: 25px;
+        border: 1px solid gray;
+        margin-top: 50px;
+    }
+    
+    .center {
+        width: 300px; /* Para que ocupe todo el ancho de la sección */
+    
+    }
+    h2 {
+        color: #757575;
+        font-family: Arial, sans-serif;
+        font-size: 18pt;
+        margin-top: 65px;
+        margin-bottom: 70px;
+        text-align: center; /* Alinea el contenido al centro dentro del recuadro */
+    }
+    label {
+        color: #757575;
+        font-family: arial;
+        font-size: 10pt;
+        font-weight: bold;
+        margin-bottom: 25px;
+        margin-left: 15px;
+    }
+    form input {
+        padding: 20px;
+        margin-top: 20px; /* Aumenta el espacio entre los inputs */
+        width: 250px;
+        height: 20px;
+        border-radius: 25px;
+        border: 4px solid #C7F1F6;
+        font-family: arial;
+        color: #757575;
+        font-size: 14pt;
+        text-align: center;
+    }
+    
+    input[type="submit"] {
+        padding: 10px 30px; /* Ajusta el padding para el botón */
+        background-color: #B2EBF2; /* Cambia el color de fondo del botón */
+        color: #757575; /* Cambia el color del texto del botón a blanco */
+        border: none; /* Elimina el borde del botón */
+        border-radius: 25px; /* Aplica esquinas redondeadas al botón */
+        font-family: Arial; /* Define la fuente del texto del botón */
+        font-size: 16px; /* Define el tamaño de la fuente del botón */
+        font-weight: bold;
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        width: 275px; /* Ajusta el ancho del botón */
+        height: 60px; /* Ajusta la altura del botón automáticamente */
+        display: block; /* Hace que el botón sea un elemento de bloque */
+        margin: 11px auto; /* Centra el botón horizontalmente y agrega un margen inferior */
+        text-align: center;
+        line-height: 40px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+        ul {
+            list-style: none; /* Quita los estilos de lista predeterminados */
+            margin-bottom: 30px; /* Elimina el margen */
+            margin-top: 35px;
+            padding: 0; /* Elimina el relleno */
+        }
+        .center ul li a {
+            color:#757575; /* Color del texto gris */
+            text-decoration: none; /* Quita el subrayado predeterminado */
+            font-family: arial;
+            margin-left: 15px; /* Margen del 5% */
+            display: block; /* Cambiado a bloque para ocupar todo el ancho disponible */
+            width: auto; /* Ancho automático */
+            text-align: left; /* Alinear el texto a la izquierda */
+            font-family: arial;
+            font-weight: bold;
+        }
+}

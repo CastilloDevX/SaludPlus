@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Salud+</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/sign-up.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/standar_normalize.css') }}">
+
+    <script src="{{ url_for('static', filename='js/redirect.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="center">
+            <!-- Formulario de registro -->
+            <h2>Datos personales</h2>
+            <form id="sign-up-form">
+
+                <label for="nombre">Nombre (s):</label><br>
+                <input type="text" id="user_name" name="nombre"><br>
+
+                <label for="apellido">Apellidos:</label><br>
+                <input type="text" id="user_lastname" name="apellido"><br>
+
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+                <input type="date" id="user_birth" name="fecha_nacimiento" placeholder="AAAA/MM/DD"><br>
+                
+                <h3>Contacto</h3>
+                
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="user_email" name="correo"><br>
+
+                <label for="celular">Número de celular:</label><br>
+                <input type="tel" id="user_phone" name="celular1"><br>
+
+                <label for="celular2">Confirmar celular:</label><br>
+                <input type="tel" id="user_phone_confirm" name="celular2"><br><br>
+                
+                <h3>Contraseña</h3>
+                <label for="pwd">Crea una contraseña:</label><br>
+                <input type="password" id="pwd" name="pwd"><br><br>
+
+                <label for="pwd_confirm">Confirmar contraseña:</label><br>
+                <input type="password" id="pwd_confirm" name="pwd_confirm"><br><br>
+                
+                <p id="notification"></p>
+                <input type="submit" value="Continuar">
+            </form>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/sign-up.js') }}"></script>
+</body>
+</html>

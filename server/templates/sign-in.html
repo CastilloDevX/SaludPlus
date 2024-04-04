@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion - Salud+</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/sign-in.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/standar_normalize.css') }}">
+
+    <script src="{{ url_for('static', filename='js/redirect.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+            </a>
+        </div>
+    </header>
+    <section>
+        <div class="center">
+            <h2>Iniciar sesión</h2>
+            
+            <form id="sign-in-form">
+                <label for="user">Usuario:</label><br>
+                <input type="text" id="user" name="user" value="" placeholder="Escriba su correo electrónico"><br>
+                
+                <label for="pwd">Contraseña:</label><br>
+                <input type="password" id="pwd" name="pwd" value="" placeholder="Escriba su contraseña"><br><br>
+                <ul>
+                    <li><a href="#">Recuperar contraseña</a></li>
+                </ul>
+                <p id="notification"></p>
+                <input type="submit" value="Ingresar">
+            </form>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/sign-in.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+body {
+    background-color: #CCECFF;
+}
+
+#global-form {
+    display: flex;
+    margin: 0;
+    height: 99.9%;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 50%;
+    padding: 3vh 3.4vh;
+    padding-right: 1.6vh;
+
+}
+
+h1 {
+    font-size: 24pt;
+    font-family: arial;
+    font-weight: bold;
+    color: #757575;
+}
+h2 {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #757575;
+    font-family: arial;
+    padding: 10px 0;
+}
+p {
+    font-size: 14pt;
+    color: #757575;
+    font-family: arial;
+    font-weight: bold;
+}
+
+#patient-information {
+    height: auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 30px 40px;
+}
+
+#patient-information div {
+    margin-bottom: 40px; /* Espacio entre cada par h2-p */
+}
+#patient-information h2, #patient-information p {
+    margin: 0;
+    vertical-align: top;
+}
+#patient-information p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    margin-left: 7px;
+}
+
+#upload-video {
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    position: relative;
+    min-height: 480px;
+}
+
+#upload-video div{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    padding: 0px 35px;
+}
+
+#upload-video u {
+    text-align: center;
+}
+#upload-video h1, #upload-report{
+    margin-top: 20px;
+}
+
+#upload-video-field {
+    display: none;
+}
+
+.file-input-label{
+    display: inline-block;
+    background-color: #41B9FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: arial;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#upload-video-label:hover {
+    background-color: #1e90ff; /* Cambia el color de fondo al pasar el mouse */
+}
+
+#record-available-btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: arial;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+}
+
+#record-available-btn.active {
+    background-color: #ff4444; /* Rojo cuando está activado */
+}
+
+#record-available-btn:not(.active) {
+    background-color: #007bff; /* Verde cuando está desactivado */
+}
+
+#record-available-btn:hover:not(.active) {
+    background-color: blue; /* Verde más oscuro cuando está desactivado y el mouse está sobre él */
+}
+#record-available-btn:active {
+    background-color: #990000; /* Rojo más oscuro cuando está activado y se hace clic */
+}
+#right {
+    display: flex;
+    margin: 0;
+    width: 50%;
+    padding: 3vh 3.4vh;
+    padding-left:1.6vh;
+}
+#modalSubirInforme {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido del modal de subir informe */
+#modalSubirInforme .modal-content {
+    display: flex; /* Utiliza flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+/* Estilo para el input de archivo del modal de subir informe */
+#modalSubirInforme #archivoPDF {
+    justify-content: left;
+    margin-top: 20px;
+    font-family: arial;
+}
+
+/* Estilo para el botón de subir del modal de subir informe */
+#modalSubirInforme #subirPDF {
+    margin-top: 25px;
+    background-color: #0097A7;
+    border-radius: 15px;
+    width: 35%;
+    height: 45px;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+
+
+
+/* Estilo para el botón de cierre del modal de subir informe */
+#modalSubirInforme .close {
+    color: #aaa; /* Color del icono de cierre */
+    font-size: 28px; /* Tamaño del icono de cierre */
+    font-weight: bold; /* Grosor del icono de cierre */
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    margin-top: auto; /* Empuja el botón hacia la línea inferior */
+}
+
+/* Estilo para el botón de cierre del modal de subir informe al pasar el mouse */
+#modalSubirInforme .close:hover,
+#modalSubirInforme .close:focus {
+    color: black; /* Cambia el color del icono al pasar el mouse */
+    text-decoration: none; /* Quita el subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+#normal-form {
+    flex: 1;
+    margin: 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+#upload-report-format {
+    background-color: #41B9FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: arial;
+    font-weight: bold;
+}
+#upload-report-format:hover {
+    background-color: #1e90ff; /* Cambia el color de fondo al pasar el mouse */
+}
+#upload-report-format {
+    display: none;
+}
+#upload-report-format-label {
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+
+
+/* Contenido del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido del modal */
+.modal-content {
+    display: flex; /* Utiliza flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+#report-preview {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+    border: 3px solid #B2EBF2;
+    justify-content: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#report-preview iframe {
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+#archivoMP4 {
+    justify-content: left;
+    margin-top: 20px;
+    font-family: arial;
+}
+
+#subirVideo {
+    margin-top: 25px;
+    background-color: #0097A7;
+    border-radius: 15px;
+    width: 35%;
+    height: 45px;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+}
+
+/* Botón de cierre del modal */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    margin-top: auto; /* Empuja el botón hacia la línea inferior */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#share {
+    flex-direction: column; 
+    justify-content: center;
+}
+/* Estilo para el contenedor de WhatsApp */
+#whatsapp {
+    width: 100%;
+
+}
+#share h1 {
+    margin-bottom: 5px; /* Espacio inferior */
+}
+#whatsapp form {
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+#whatsapp input[type="text"] {
+    justify-content: center;
+    margin-top: 10px; /* Margen superior */
+    background-color: white;
+    color: #757575;
+    border: 4px solid #B2EBF2;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 40px;
+    width: 93%;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    font-family: arial;
+    font-size: 16pt;
+    border-bottom: 4px solid #B2EBF2; /* Añade un borde inferior */
+}
+/* Estilo para el botón de envío */
+#whatsapp input[type="submit"] {
+    margin-top: 20px; /* Margen superior */
+    background-color: #0BAA00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    font-family: arial;
+    margin-top:  20px;
+    font-weight: bold;
+}
+
+#whatsapp input[type="submit"]:hover {
+    background-color: green; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+/*NO MOVER */
+body {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 8vh); /* Restamos 8vh del alto total */
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#left, #right {
+    width: calc(50% - 10px); /* 10px de espacio entre #left y #right */
+    box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
+    margin: 5px; /* Espacio entre #left y #right */
+}
+
+.notification {
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
+.display-none {
+    display: none;
+}
+
+#recording-header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#recording-header h1{
+    width: 90%;
+}
+
+#close_record_options {
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#close_record_options:hover {
+    cursor: pointer;
+}
+
+#recording-video p {
+    margin: 0px;
+}
+
+#recording-options-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+#video-recording-preview {
+    width: 100%;
+    height: 250px;
+}
+
+#recording-options-btns a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#recording-options-btns a:hover {
+    cursor: pointer;
+}
+
+#recording-options-btns a img {
+    width: 75px;
+    margin: 0;
+}
+
+.active-notification {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.active-notification div {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#notification-options  { 
+    transform: translate(0, 0);
+    position: static;
+    display: flex;
+    justify-content: space-between;
+}
+
+#notification-options a {
+    background-color: #8e8e8e;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+#notification-options a:hover {
+    cursor: pointer;
+}
+
+.unactive-notification {
+    display: none;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+@media (max-width: 1200px) {
+    #global-form {
+        display: flex;
+        margin: 0;
+        background-color: #CCECFF;
+        height: auto;
+        min-width: 650px;
+
+    }
+    #left, #right {
+        width: 100%;
+    }
+    #left {
+        padding-left: 20px ;
+        padding-right: 20px;
+    }
+    #right {
+        padding-left: 20px ;
+        padding-right: 20px;
+    }
+
+}

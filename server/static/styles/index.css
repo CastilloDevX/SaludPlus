@@ -1,0 +1,122 @@
+body {
+    overflow: hidden;
+}
+
+main {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    float: left; /* Alinea el elemento a la izquierda */
+    width: auto; /* Opcional: ajusta el ancho según tus necesidades */
+}
+
+.left img {
+    height: 140vh; /* Fijar la altura */
+    width: auto; /* Ancho proporcional */
+    position: relative;
+    top: -150px;
+    z-index: -1;
+}
+
+.right {
+    background-color: rgba(255,255,255, 0.8);
+    position: fixed;
+    right: 0px;
+    top: 55%;
+    transform: translate(0%, -50%);
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.right h1 {
+    font-weight: bold;
+    color: #757575;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+#salud-tile {
+    color: #50b9b2;
+}
+
+#plus-title {
+    color: #868589;
+}
+
+.right h2 {
+    text-align: center;
+    color: #757575;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.right a {
+    color: #757575;
+    background-color: #b2ebf2;
+    padding: 25px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.right button {
+    background-color: #B2EBF2; /* Fondo azul claro */
+    color: #757575; /* Color del texto blanco */
+    border: none; /* Quita el borde */
+    padding: 25px 20px; /* Añade relleno */
+    display: block; /* Hace que el botón sea de ancho completo */
+    text-align: center; /* Centra el texto */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-family: arial;
+    width: 450px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.right ul a {
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    color: #757575;
+}
+
+.right button:hover {
+    background-color: #87CEFA; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    .left img {
+        height: 150vh; /* Fijar la altura */
+    }
+
+    main .right {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main .right h2{
+        font-size: 17px;
+    }
+    main .right h1{
+        font-size: 40px;
+    }
+}

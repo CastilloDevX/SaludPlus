@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasound Panel - Salud+</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/standar_normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/reference-panel.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+            </a>
+        </div>
+    </header>
+
+    <form id="global-form">
+        <div id="left">
+            <div id="patient-information">
+                <h1>Información</h1>
+                <h2>Nombre del paciente: <span id="patient_name"></span></h2>
+                <h2>Tipo de ultrasonido: <span id="examination_type"></span></h2>
+                <h2>Fecha de examinacion <span id="examination_date"></span></h2>
+            </div>
+
+            <div id="upload-video">
+                <div id="video-options">
+                    <h1>Subir grabación</h1>
+                    <p>Subir la previa grabación de ultrasonido (opcional).</p>
+
+                    <label class="file-input-label" id="upload-video-label" for="upload-video-field">Subir archivo MP4</label>
+                    <input class="upload-content" type="file" id="upload-video-field"></input>
+                    <p class="notification" id="upload-video-field-notification"></p>
+                    
+                    <h1>Herramientas de grabación</h1>
+                    <p>¿Desea habilitar las herramientas de grabación de Salud+?</p>
+                    <a id="record-available-btn">Habilitar</a>
+                    <u>
+                        Esta opción es una herramienta para poder grabar la pantalla de este monitor,
+                        de esa manera el paciente puede compartirlo como telesonografía a sus familiares y/o médicos,
+                        aunque para acceder a su ultrasonido se requiere de una contraseña.
+                    </u>
+                </div>
+
+                <div id="recording-video" style="display: none;" >
+                    <aside id="recording-header">
+                        <h1>Herramientas de grabación</h1>
+                        <a id="close_record_options">X</a>
+                    </aside>
+                    
+                    <p>Vistas previa</p>
+                    <iframe id="video-recording-preview"src=""></iframe>
+
+                    <section id="recording-options-btns">
+                        <a id="telesonography-segurity" class="opacity">
+                            <img src="{{ url_for('static', filename='img/segurity-icon.png') }}" alt="">
+                            <p>Seguridad de <br>telesongrafía</p>
+                        </a>
+                        <a id="start-recording">
+                            <img src="{{ url_for('static', filename='img/recording-icon.png') }}" alt="">
+                            <p>Iniciar<br> grabación</p>
+                        </a>
+                        <a id="stop-recording">
+                            <img src="{{ url_for('static', filename='img/stop-recording-icon.png') }}" alt="">
+                            <p>Detener <br>grabacion</p>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="right">
+            <div id="normal-form">
+                <div id="upload-report">
+                    <h1>Información de la examinación</h1>
+                    <p>Subir el informe en PDF</p>
+                    <label class="file-input-label" id="upload-report-format-label" for="upload-report-format">Subir archivo PDF</label>
+                    <input class="upload-content" type="file" id="upload-report-format"></input>
+                    <p class="notification" id="upload-report-format-notification"></p>
+                </div>
+
+                <div id="report-preview-wrapper">
+                    <p>Vista previa</p>
+                    <div id="report-preview">
+                        <iframe src=""></iframe>
+                    </div>
+                </div>
+
+                <div id="share">
+                    <h1>Compartir por WhatsApp</h1>
+                    <div id="whatsapp">
+                        <input type="text" id="patient-phone-number" name="phone" maxlength="15" value="+529811234567">
+                        <input id="completed-all" type="submit" value="Completado">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <div id="modal-notifications" class="unactive-notification">
+
+        <div>
+            <h1 id="notification-title">Notificacion</h1>
+            <p id="notification-desc">Hola esta es una notification</p>
+
+            <div id="notification-options">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/reference-panel.js') }}"></script>
+</body>
+</html>

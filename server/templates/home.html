@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Salud+</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/standar_normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+
+    <script src="{{ url_for('static', filename='js/redirect.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div id="profile">
+            <div id="general-data">
+                <img src="{{ url_for('static', filename='img/avatar.png') }}" alt="Avatar">
+                <h1 id="user_name">User Name</h1>
+            </div>
+            <hr/>
+            <div id="personal-data">
+                <h1>Datos personales</h1>
+                <p>Edad: <span id="user_age">##</span></p>
+                <p>Fecha de nacimiento: <span id="user_birth">##/##/#####</span></p>
+                <p>Número telefónico: <span id="user_phone">### ### ####</span></p>
+                <p>Correo electrónico: <span id="user_email">###@####.###</span></p>
+            </div>
+            <button id="log-out">Cerrar sesion</button>
+        </div>
+
+        <div id="view">
+            <div id="nav-options">
+                <button id="my-ultrasounds-btn" class="option_selected" >Mis ultrasonidos</button>
+                <button id="schedule-ultrasounds-btn" class="option_no_selected">Programar cita</button>
+            </div>
+
+            <div id="view-option">
+                <div id="ultrasounds" class="no-view-option-selected">
+                    <div>
+                        <h1>Mis ultrasonidos</h1>
+                        <div id="ultrasounds-btns">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div id="schedule-ultrasound" class="no-view-option-selected">
+                    <h1>Agendar una cita</h1>
+                    <h3>Haz tu pago en línea y obtén un 15% de descuento.</h2>
+                    <p>*No es válido en paquetes, estudios especiales ni en pruebas de la COVID-19. El estudio debe de ser mayor a $50.</p>
+                    
+                    <h2>Selecciona el estudio que necesitas</h2>
+                    <select name="examination_type" value="" id="examination_type">
+                        <option value="" disabled selected>Selecciona un estudio</option>
+                    </select>
+
+                    <h2>Busca una fecha y horario</h2>
+                    <div id="schedule-date">
+                        <input id="date" type="date" >
+                        <input id="time" type="time">
+                    </div>
+
+                    <p id="notification"></p>
+                    <button id="submit">Crear cita</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91.9vh;
+    width: auto;
+}
+
+.center {
+    width: 400px;
+}
+
+.center h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    font-family: arial;
+    font-weight: bold;
+    color: #757575;
+    font-size: 24pt;
+}
+label {
+    font-size: 18pt;
+    font-family: arial;
+    font-weight: bold;
+    color: #757575;
+    margin-left: 20px;
+
+    
+}
+form input[type="text"],
+form input[type="password"] {
+    width: 86.5%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 6vh;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 30px;
+    border-radius: 25px;
+    font-family: arial;
+    border: 1px solid #C7F1F6;
+    color: #757575;
+    background-color: #C7F1F6;
+    font-size: 14pt;
+}
+
+form input[type="password"] {
+    margin-bottom: 5px;
+}
+
+.center form input[type="submit"] {
+    height: 6vh;
+    width: 100%;
+    background-color: #B2EBF2;
+    color: #757575;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center form input[type="submit"]:hover {
+    background-color: #87CEFA;
+    color: white;
+}
+
+.center ul {
+    list-style: none; /* Quita los estilos de lista predeterminados */
+    padding: 0; /* Elimina el relleno */
+}
+.center ul li {
+    margin-bottom: 10px; /* Añade un espacio entre elementos de lista */
+}
+
+.center ul li a {
+    color:#757575; /* Color del texto gris */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    font-family: arial;
+    margin-left: 15px; /* Margen del 5% */
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-family: arial;
+    
+}
+
+.center ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+#notification {
+    margin-top: 40px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap
+}
